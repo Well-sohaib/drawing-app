@@ -1,13 +1,17 @@
+// Javascript Code
+
 const canvas = document.getElementById("canvas");
 const body = document.querySelector("body");
 canvas.height = window.innerHeight;
 canvas.width = window.innerWidth;
+
 
 let theColor = '';
 let lineW = 5;
 let prevX = null;
 let prevY = null;
 let draw = false;
+
 
 body.style.backgroundColor = '#0e1020';
 let theInput = document.getElementById("favcolor");
@@ -17,8 +21,10 @@ theInput.addEventListener("input",function(){
     body.style.backgroundColor = theColor;
 }, false);
 
+
 const ctx = canvas.getContext("2d");
 ctx.lineWidth = lineW;
+
 
 document.getElementById("ageInputId").oninput = function(){
     draw = null;
@@ -26,6 +32,7 @@ document.getElementById("ageInputId").oninput = function(){
     document.getElementById("ageOutputId").innerHTML = lineW;
     ctx.lineWidth = lineW;
 };
+
 
 let clrs = document.querySelectorAll(".clr");
 clrs = Array.from(clrs);
@@ -35,10 +42,12 @@ clrs.forEach(clr => {
     })
 })
 
+
 let clearBtn = document.querySelector(".clear");
 clearBtn.addEventListener("click", ()=>{
     ctx.clearRect(0,0, canvas.width, canvas.height)
 });
+
 
 let saveBtn = document.querySelector(".save");
 saveBtn.addEventListener("click", () =>{
@@ -49,8 +58,10 @@ saveBtn.addEventListener("click", () =>{
     a.click();
 })
 
+
 window.addEventListener("mousedown", (e) => draw = true)
 window.addEventListener("mouseup", (e) => draw = false)
+
 
 window.addEventListener("mousemove", (e) => {
     if(prevX == null || prevY == null || !draw){
