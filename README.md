@@ -10,3 +10,5 @@ The user can choose the color of the lines they draw by using a color picker or 
 ![3](https://user-images.githubusercontent.com/92204088/211241547-dc49c5e6-84b7-4786-ad80-bc2947fdc9e2.PNG)
 
 The app also has a save feature that allows the user to download their artwork as a PNG file. To do this, the user simply needs to click the save button, and the app will generate a download link for the image. The app is responsive and adapts to the size of the user's screen, making it easy to use on devices of all sizes. Overall, this drawing app is a fun and easy way to create digital art and share it with others.
+
+Thank you for considering!
